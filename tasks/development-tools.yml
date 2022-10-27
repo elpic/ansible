@@ -1,0 +1,237 @@
+---
+- name: Install prettier
+  community.general.homebrew:
+    name: fsouza/prettierd/prettierd
+    state: present
+  tags:
+    - formatter
+    - developer-tools
+    - install
+    - prettierd
+
+- name: Install stylua
+  community.general.homebrew:
+    name: stylua
+    state: present
+  tags:
+    - formatter
+    - developer-tools
+    - install
+    - stylua
+    - lua
+
+- name: Install stylua
+  community.general.homebrew:
+    name: selene
+    state: present
+  tags:
+    - formatter
+    - developer-tools
+    - install
+    - selene
+    - yaml
+
+- name: Install yamllint
+  community.general.homebrew:
+    name: yamllint
+    state: present
+  tags:
+    - lint
+    - developer-tools
+    - install
+    - yaml
+    - yamllint
+
+- name: Install yaml-language-server
+  community.general.homebrew:
+    name: yaml-language-server
+    state: present
+  tags:
+    - language-server
+    - developer-tools
+    - install
+    - yaml
+    - yaml-language-server
+
+- name: Install exa
+  community.general.homebrew:
+    name: exa
+    state: present
+  tags:
+    - exa
+    - developer-tools
+    - install
+    - ls-replacement
+    - ls
+
+- name: Install tldr
+  community.general.homebrew:
+    name: tldr
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - tldr
+    - information
+
+- name: Install htop
+  community.general.homebrew:
+    name: htop
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - htop
+
+- name: Install shellcheck
+  community.general.homebrew:
+    name: shellcheck
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - shellcheck
+    - shell
+    - lint
+
+- name: Install jq
+  community.general.homebrew:
+    name: jq
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - jq
+    - json-query
+
+- name: Install lazygit
+  community.general.homebrew:
+    name: lazygit
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - lazygit
+
+- name: Install ncdu
+  community.general.homebrew:
+    name: ncdu
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - ncdu
+
+- name: Install docker
+  community.general.homebrew_cask:
+    name: docker
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - docker
+    - docker-desktop
+
+- name: Install gpg
+  community.general.homebrew:
+    name: gpg
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - gpg
+    - yarn
+    - asdf
+
+- name: Install skitch
+  community.general.homebrew_cask:
+    name: skitch
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - skitch
+    - screenshot
+
+- name: Install tree
+  community.general.homebrew:
+    name: tree
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - tree
+    - file-viewer
+    - terminal
+
+- name: Install elixir-ls
+  community.general.homebrew:
+    name: elixir-ls
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - elixir-ls
+    - elixir
+    - vim
+
+- name: Install responsively
+  community.general.homebrew_cask:
+    name: responsively
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - app
+    - responsive-checker
+    - responsively
+
+- name: Install rip grep
+  community.general.homebrew:
+    name: ripgrep
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - ripgrep
+    - vim
+
+- name: Install diff-so-fancy
+  community.general.homebrew:
+    name: diff-so-fancy
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - diff-so-fancy
+    - diff
+    - git
+
+- name: Install asdf
+  community.general.homebrew:
+    name: asdf
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - asdf
+    - version-manager
+
+- name: Install asdf plugins and software
+  shell: ./bin/asdf.sh
+  tags:
+    - developer-tools
+    - install
+    - asdf
+    - asdf-plugins
+    - asdf-software
+
+- name: Install misspell
+  shell: |
+    which misspell 1>/dev/null || (curl -L https://git.io/misspell | \
+      BINDIR=/usr/local/bin/ bash)
+  tags:
+    - developer-tools
+    - install
+    - misspell

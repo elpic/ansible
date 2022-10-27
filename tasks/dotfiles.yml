@@ -1,0 +1,16 @@
+- name: Setup dotfiles
+  ansible.builtin.git:
+    repo: git@github.com:elpic/dotfiles.git
+    dest: ~/.dotfiles
+    accept_hostkey: yes
+    force: yes
+  tags:
+    - dotfiles
+    - install
+
+- name: Configure dotfiles 
+  shell: ./bin/dotfiles.sh
+  tags:
+    - dotfiles
+    - install
+

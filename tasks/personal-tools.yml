@@ -1,0 +1,27 @@
+- name: Install whatsapp
+  community.general.homebrew_cask:
+    name: whatsapp
+    state: present
+  tags:
+    - whatsapp
+    - personal
+    - install
+
+- name: Install telegram-desktop
+  community.general.homebrew_cask:
+    name: telegram-desktop
+    state: present
+  tags:
+    - telegram-desktop
+    - personal
+    - install
+
+- name: Install calibre
+  community.general.homebrew_cask:
+    name: calibre
+    state: present
+  tags:
+    - calibre
+    - personal
+    - install
+    - books

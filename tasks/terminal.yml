@@ -1,0 +1,68 @@
+- name: Install zsh
+  community.general.homebrew:
+    name: zsh
+    state: present
+
+- name: Install iTerm2
+  community.general.homebrew_cask:
+    name: iterm2
+    state: present
+  tags:
+    - install
+    - terminal
+    - terminal-emulator
+
+- name: Install alacritty
+  community.general.homebrew_cask:
+    name: alacritty
+    state: present
+  tags:
+    - install
+    - terminal
+    - terminal-emulator
+
+- name: Install oh-my-zsh
+  shell: |
+    if [[ ! -d ~/.oh-my-zsh ]]; then
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
+  tags:
+    - install
+    - terminal
+    - zsh
+    - tool
+
+- name: Install antigen
+  shell: |
+    if [[ ! -f ~/.oh-my-zsh/antigen.zsh ]]; then
+      curl -L git.io/antigen > ~/.oh-my-zsh/antigen.zsh
+    fi
+  tags:
+    - install
+    - terminal
+    - zsh
+    - tool
+    - plugin-manager
+
+- name: Install zoxide
+  community.general.homebrew:
+    name: zoxide
+    state: present
+  tags:
+    - install
+    - terminal
+    - zoxiode
+    - directory-navigation
+    - vim
+    - tool
+
+- name: Install fzf
+  community.general.homebrew:
+    name: fzf
+    state: present
+  tags:
+    - install
+    - terminal
+    - fzf
+    - vim
+    - tool

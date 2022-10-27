@@ -1,0 +1,7 @@
+# Ansible
+
+*.retry
+
+# Vim
+
+*.swp

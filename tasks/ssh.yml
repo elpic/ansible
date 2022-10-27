@@ -1,0 +1,69 @@
+- name: Ensure .ssh directory exists
+  file:
+    dest: "{{ dest_key | dirname }}"
+    mode: 0700
+    state: directory
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install ancient ssh key
+  copy:
+    src: "{{ source_ancient_key }}"
+    dest: "{{ dest_ancient_key }}"
+    mode: 0600
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install ancient ssh key public
+  copy:
+    src: "{{ source_ancient_key }}.pub"
+    dest: "{{ dest_ancient_key }}.pub"
+    mode: 0644
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install ssh key
+  copy:
+    src: "{{ source_key }}"
+    dest: "{{ dest_key }}"
+    mode: 0600
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install ssh key public
+  copy:
+    src: "{{ source_key }}.pub"
+    dest: "{{ dest_key }}.pub"
+    mode: 0644
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Set authorized key
+  ansible.posix.authorized_key:
+    user: "{{ lookup('env', 'USER') }}"
+    state: present
+    key: "{{ item }}"
+  with_file:
+    - "{{ dest_ancient_key }}.pub"
+    - "{{ dest_key }}.pub"
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Add/update public key in known hosts
+  ansible.builtin.shell: |
+    content=$(ssh-keyscan -t ed25519 {{ item }}) 
+    grep -q $content ~/.ssh/known_hosts || echo $content >> ~/.ssh/known_hosts
+  with_items:
+    - github.com

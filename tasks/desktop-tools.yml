@@ -1,0 +1,44 @@
+- name: Install slack
+  community.general.homebrew_cask:
+    name: slack
+    state: present
+
+- name: Install brave browser
+  community.general.homebrew_cask:
+    name: brave-browser
+    state: present
+
+- name: Install bitwarden
+  community.general.homebrew_cask:
+    name: bitwarden
+    state: present
+
+- name: Install rectangle
+  community.general.homebrew_cask:
+    name: rectangle
+    state: present
+
+- name: Install postman
+  community.general.homebrew_cask:
+    name: postman
+    state: present
+
+- name: Install insomnia
+  community.general.homebrew_cask:
+    name: insomnia
+    state: present
+
+- name: Install tableplus
+  community.general.homebrew_cask:
+    name: tableplus
+    state: present
+
+- name: Install devtoys
+  community.general.homebrew_cask:
+    name: devtoys
+    state: present
+
+- name: Install notion
+  community.general.homebrew_cask:
+    name: notion
+    state: present

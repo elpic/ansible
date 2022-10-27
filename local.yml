@@ -1,0 +1,35 @@
+- hosts: localhost
+  vars:
+    source_ancient_key: "./.ssh/id_rsa"
+    dest_ancient_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
+
+  tasks:
+    - name: SSH related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/ssh.yml
+
+    - name: Terminal related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/terminal.yml
+
+    - name: Desktop tools related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/desktop-tools.yml
+
+    - name: Dotfiles related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/dotfiles.yml
+
+    - name: Developer tools related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/development-tools.yml
+
+    - name: IDE related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/ide.yml
+
+    - name: Personal related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/personal-tools.yml
