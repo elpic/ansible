@@ -53,6 +53,103 @@
     - yaml
     - yaml-language-server
 
+- name: Install awscli
+  community.general.homebrew:
+    name: awscli
+    state: present
+  tags:
+    - awscli
+    - developer-tools
+    - install
+    - aws
+
+- name: Install bat
+  community.general.homebrew:
+    name: bat
+    state: present
+  tags:
+    - bat
+    - developer-tools
+    - install
+    - cat-replacement
+    - cat
+
+- name: Install scc
+  community.general.homebrew:
+    name: scc
+    state: present
+  tags:
+    - scc
+    - developer-tools
+    - install
+    - code-counter
+    - estimated-project-cost
+
+- name: Install duf
+  community.general.homebrew:
+    name: duf
+    state: present
+  tags:
+    - duf
+    - developer-tools
+    - install
+    - disc-usage
+
+- name: Install entr
+  community.general.homebrew:
+    name: entr
+    state: present
+  tags:
+    - entr
+    - developer-tools
+    - install
+    - watch-changes
+    - utility
+
+- name: Install fdupes
+  community.general.homebrew:
+    name: fdupes
+    state: present
+  tags:
+    - fdupes
+    - developer-tools
+    - install
+    - utility
+    - duplicate-files
+
+- name: Install hyperfine
+  community.general.homebrew:
+    name: hyperfine
+    state: present
+  tags:
+    - hyperfine
+    - developer-tools
+    - install
+    - utility
+    - benchmark
+
+- name: Install procs
+  community.general.homebrew:
+    name: procs
+    state: present
+  tags:
+    - procs
+    - developer-tools
+    - install
+    - utility
+    - ps
+
+- name: Install tre
+  community.general.homebrew:
+    name: tre
+    state: present
+  tags:
+    - tre
+    - developer-tools
+    - install
+    - utility
+    - tree
+
 - name: Install exa
   community.general.homebrew:
     name: exa
