@@ -1,19 +1,8 @@
+---
 - name: Install nvim
   community.general.homebrew:
     name: neovim
     state: present
-  tags:
-    - dotfiles
-    - install
-    - vim
-    - ide
-
-- name: Install Packer 
-  ansible.builtin.git:
-    repo: https://github.com/wbthomason/packer.nvim
-    dest: ~/.local/share/nvim/site/pack/packer/start/packer.nvim    
-    accept_hostkey: yes
-    force: yes
   tags:
     - dotfiles
     - install
@@ -25,14 +14,6 @@
     if [[ ! -f /usr/local/bin/vim ]]; then
       ln -s /usr/local/bin/nvim /usr/local/bin/vim
     fi
-  tags:
-    - dotfiles
-    - install
-    - vim
-    - ide
-
-- name: Install Packer dependecies
-  shell: vim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
   tags:
     - dotfiles
     - install
