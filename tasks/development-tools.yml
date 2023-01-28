@@ -141,7 +141,7 @@
 
 - name: Install tre
   community.general.homebrew:
-    name: tre
+    name: tre-command
     state: present
   tags:
     - tre
