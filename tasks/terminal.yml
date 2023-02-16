@@ -1,3 +1,4 @@
+---
 - name: Install zsh
   community.general.homebrew:
     name: zsh
@@ -66,3 +67,25 @@
     - fzf
     - vim
     - tool
+
+- name: Install tmux
+  community.general.homebrew:
+    name: tmux
+    state: present
+  tags:
+    - tmux
+    - terminal
+    - install
+    - terminal-multiplexer
+
+- name: Install tmux plugin manager
+  ansible.builtin.git:
+    repo: git@github.com:tmux-plugins/tpm.git
+    dest: ~/.tmux/plugins/tpm
+    accept_hostkey: yes
+    force: yes
+  tags:
+    - tpm
+    - tmux
+    - terminal
+    - install

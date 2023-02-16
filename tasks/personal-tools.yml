@@ -1,3 +1,4 @@
+---
 - name: Install whatsapp
   community.general.homebrew_cask:
     name: whatsapp
