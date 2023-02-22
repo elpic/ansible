@@ -1,14 +1,23 @@
 - hosts: localhost
   vars:
+    # SSH
     source_ancient_key: "./.ssh/id_rsa"
     dest_ancient_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     source_key: "./.ssh/id_ed25519"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
 
+    # AWS
+    dest_aws_path: "{{ lookup('env', 'HOME') }}/.aws"
+    src_aws_path: "./.aws"
+
   tasks:
     - name: SSH related tasks
       ansible.builtin.include_tasks:
         file: tasks/ssh.yml
+
+    - name: AWS related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/aws.yml
 
     - name: Terminal related tasks
       ansible.builtin.include_tasks:
