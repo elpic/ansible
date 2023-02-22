@@ -1,0 +1,30 @@
+---
+- name: Ensure .aws directory exists
+  file:
+    dest: "{{ dest_aws_path }}"
+    mode: 0700
+    state: directory
+  tags:
+    - dotfiles
+    - install
+    - aws
+
+- name: Copy aws config file
+  copy:
+    src: "{{ src_aws_path }}/.aws/config"
+    dest: "{{ dest_aws_path }}/.aws/config"
+    mode: 0644
+  tags:
+    - dotfiles
+    - install
+    - aws
+
+- name: Copy aws credentials file
+  copy:
+    src: "{{ src_aws_path }}/.aws/credentials"
+    dest: "{{ dest_aws_path }}/.aws/credentials"
+    mode: 0644
+  tags:
+    - dotfiles
+    - install
+    - aws

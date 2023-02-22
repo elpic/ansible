@@ -37,7 +37,7 @@ if [[ "$*" == *"--ask-vault-pass"* ]]; then
   echo ""
 else
   # This is to prevent errors since the password was not provided
-  ANSIBLE_ARGS="--skip-tags ssh"
+  ANSIBLE_ARGS="--skip-tags ssh,aws"
 fi
 
 # Remove the option because is going to be provided in a tempfile
