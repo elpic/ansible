@@ -11,8 +11,8 @@
 
 - name: Copy aws config file
   copy:
-    src: "{{ src_aws_path }}/.aws/config"
-    dest: "{{ dest_aws_path }}/.aws/config"
+    src: "{{ src_aws_path }}/config"
+    dest: "{{ dest_aws_path }}/config"
     mode: 0644
   tags:
     - dotfiles
@@ -21,8 +21,8 @@
 
 - name: Copy aws credentials file
   copy:
-    src: "{{ src_aws_path }}/.aws/credentials"
-    dest: "{{ dest_aws_path }}/.aws/credentials"
+    src: "{{ src_aws_path }}/credentials"
+    dest: "{{ dest_aws_path }}/credentials"
     mode: 0644
   tags:
     - dotfiles
