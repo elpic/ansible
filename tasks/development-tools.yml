@@ -74,6 +74,18 @@
     - developer-tools
     - install
 
+- name: Install kubecolor
+  community.general.homebrew:
+    name: hidetatz/tap/kubecolor
+    state: present
+  tags:
+    - kubernetes
+    - cli
+    - kubecolor
+    - kubernetes-tools
+    - developer-tools
+    - install
+
 - name: Install anaconda
   community.general.homebrew_cask:
     name: anaconda
