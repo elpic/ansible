@@ -21,13 +21,14 @@ declare -a plugins=("elixir" "erlang" "golang" "nodejs" "python" "ruby" "rust" "
 echo "Install plugins"
 
 for plugin in "${plugins[@]}"; do
-  if [[ $(asdf plugin list | grep $plugin | wc -l) -ne 1 ]]; then
-    asdf plugin add $plugin
+  if [[ $(asdf plugin list | grep -c "$plugin") -ne 1 ]]; then
+    asdf plugin add "$plugin"
   fi
 done
 
 declare -a software=(
   "elixir,1.12.2"
+  "elixir,1.14.3"
   "erlang,23.3"
   "nodejs,16.16.0"
   "golang,1.19.1"
