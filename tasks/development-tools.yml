@@ -63,6 +63,27 @@
     - install
     - aws
 
+- name: Install kubernetes-cli
+  community.general.homebrew:
+    name: kubernetes-cli
+    state: present
+  tags:
+    - kubernetes
+    - cli
+    - kubectl
+    - developer-tools
+    - install
+
+- name: Install anaconda
+  community.general.homebrew_cask:
+    name: anaconda
+    state: present
+  tags:
+    - anaconda
+    - python
+    - developer-tools
+    - install
+
 - name: Install bat
   community.general.homebrew:
     name: bat
