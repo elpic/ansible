@@ -74,6 +74,17 @@
     - developer-tools
     - install
 
+- name: Install kustomize
+  community.general.homebrew:
+    name: kubernetes-cli
+    state: present
+  tags:
+    - kubernetes
+    - cli
+    - kustomize
+    - developer-tools
+    - install
+
 - name: Install kubecolor
   community.general.homebrew:
     name: hidetatz/tap/kubecolor
