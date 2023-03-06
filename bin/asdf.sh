@@ -16,7 +16,7 @@ if [[ "${1-}" =~ ^-*h(elp)?$ ]]; then
   exit
 fi
 
-declare -a plugins=("elixir" "erlang" "golang" "nodejs" "python" "ruby" "rust" "yarn" "terraform")
+declare -a plugins=("elixir" "erlang" "golang" "nodejs" "python" "ruby" "rust" "yarn" "terraform" "kustomize")
 
 echo "Install plugins"
 
@@ -34,18 +34,19 @@ declare -a software=(
   "golang,1.19.1"
   "python,2.7.18"
   "python,3.10.5"
-  "yarn,1.22.17",
-  "ruby,3.1.0",
-  "rust,1.66.0",
+  "yarn,1.22.17"
+  "ruby,3.1.0"
+  "rust,1.66.0"
   "terraform,1.3.7"
+  "kustomize,4.5.7"
 )
 echo "Install software"
 
 for i in "${software[@]}"; do
   IFS=",";
-  set -- $i;
+  set -- "$i";
 
-  if [[ $(asdf list $1 | grep $2 | wc -l) -ne 1 ]]; then
-    asdf install $1 $2
+  if [[ $(asdf list "$1" | grep -c "$2") -ne 1 ]]; then
+    asdf install "$1" "$2"
   fi
 done
