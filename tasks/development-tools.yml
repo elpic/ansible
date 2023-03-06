@@ -77,7 +77,7 @@
 - name: Install kustomize
   community.general.homebrew:
     name: kustomize
-    state: present
+    state: removed
   tags:
     - kubernetes
     - cli
