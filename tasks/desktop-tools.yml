@@ -42,3 +42,12 @@
   community.general.homebrew_cask:
     name: notion
     state: present
+ 
+- name: Install cron
+  community.general.homebrew_cask:
+    name: cron
+    state: present
+  tags: 
+    - install
+    - desktop-app
+    - calendar
