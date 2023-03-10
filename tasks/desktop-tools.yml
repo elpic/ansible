@@ -42,7 +42,18 @@
   community.general.homebrew_cask:
     name: notion
     state: present
- 
+
+- name: Install Postgres app
+  community.general.homebrew_cask:
+    name: postgres-unofficial
+    state: present
+  tags:
+    - postgres
+    - desktop-app
+    - databse
+    - developer-tools
+    - install
+
 - name: Install cron
   community.general.homebrew_cask:
     name: cron
