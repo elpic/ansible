@@ -36,6 +36,7 @@ declare -a software=(
   "python,3.10.5"
   "yarn,1.22.17"
   "ruby,3.1.0"
+  "ruby,2.6.6"
   "rust,1.66.0"
   "terraform,1.3.7"
   "kustomize,4.5.7"

@@ -85,6 +85,17 @@
     - developer-tools
     - install
 
+- name: Install libpq
+  community.general.homebrew:
+    name: libpq
+    state: present
+  tags:
+    - libpq
+    - postgres
+    - databse
+    - developer-tools
+    - install
+
 - name: Install kubecolor
   community.general.homebrew:
     name: hidetatz/tap/kubecolor
