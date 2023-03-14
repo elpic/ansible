@@ -40,6 +40,7 @@ declare -a software=(
   "rust,1.66.0"
   "terraform,1.3.7"
   "kustomize,4.5.7"
+  "kustomize,5.0.0"
 )
 echo "Install software"
 
