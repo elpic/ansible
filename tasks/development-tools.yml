@@ -63,6 +63,17 @@
     - install
     - aws
 
+- name: Install Mockoon
+  community.general.homebrew_cask:
+    name: mockoon
+    state: present
+  tags:
+    - mock
+    - api
+    - server
+    - developer-tools
+    - install
+
 - name: Install kubernetes-cli
   community.general.homebrew:
     name: kubernetes-cli
