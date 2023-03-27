@@ -85,17 +85,6 @@
     - developer-tools
     - install
 
-- name: Install kustomize
-  community.general.homebrew:
-    name: kustomize
-    state: removed
-  tags:
-    - kubernetes
-    - cli
-    - kustomize
-    - developer-tools
-    - install
-
 - name: Install bash
   community.general.homebrew:
     name: bash
