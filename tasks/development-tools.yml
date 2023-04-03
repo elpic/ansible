@@ -53,6 +53,47 @@
     - yaml
     - yaml-language-server
 
+
+- name: Install gcc
+  community.general.homebrew:
+    name: gcc
+    state: present
+  tags:
+    - gcc
+    - developer-tools
+    - install
+    - postgres-dependency
+
+- name: Install readline
+  community.general.homebrew:
+    name: readline
+    state: present
+  tags:
+    - readline
+    - developer-tools
+    - install
+    - postgres-dependency
+
+- name: Install zlib
+  community.general.homebrew:
+    name: zlib
+    state: present
+  tags:
+    - zlib
+    - developer-tools
+    - install
+    - postgres-dependency
+
+- name: Install ossp-uuid
+  community.general.homebrew:
+    name: ossp-uuid
+    state: present
+  tags:
+    - ossp-uuid
+    - developer-tools
+    - install
+    - postgres-dependency
+
 - name: Install awscli
   community.general.homebrew:
     name: awscli
