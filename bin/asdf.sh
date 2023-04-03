@@ -16,7 +16,7 @@ if [[ "${1-}" =~ ^-*h(elp)?$ ]]; then
 	exit
 fi
 
-declare -a plugins=("elixir" "erlang" "golang" "nodejs" "python" "ruby" "rust" "yarn" "terraform" "kustomize")
+declare -a plugins=("elixir" "erlang" "golang" "nodejs" "python" "ruby" "rust" "yarn" "terraform" "kustomize" "postgres")
 
 echo "Install plugins"
 
@@ -42,6 +42,7 @@ declare -a software=(
 	"terraform,1.3.7"
 	"kustomize,4.5.7"
 	"kustomize,5.0.0"
+	"postgres,14.0"
 )
 echo "Install software"
 
