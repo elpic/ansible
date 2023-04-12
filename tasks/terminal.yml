@@ -68,6 +68,16 @@
     - vim
     - tool
 
+- name: Install zellij
+  community.general.homebrew:
+    name: zellij
+    state: present
+  tags:
+    - zellij
+    - terminal
+    - install
+    - terminal-multiplexer
+
 - name: Install tmux
   community.general.homebrew:
     name: tmux
