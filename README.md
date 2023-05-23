@@ -33,14 +33,6 @@ make install
 Go to the URL [https://sparkmailapp.com/download](https://sparkmailapp.com/download) download the app and 
 follow the installation instructions
 
-**iTerm Profile**
-
-On the `.dotfiles` there is a json with the configuration for the iTerm profile that profile contains the colors
-and other useful things for iTerm. In order to configure that open iTerm then go to **Profiles** then **Open Profiles...**
-then click on **Edit Profiles**, **Other Actions..** and finally **Import JSON Profiles...**. A finder will be open to select the
-type **Cmd + Shift + .** (this will reveal the hidden files) go to your home directory and select `.dotfiles` there select 
-`iterm-profile.json` and import that file. Set that as default and delete the other default. Finally restart iTerm
-
 ### Installed automatically
 
 Navigate to the following 

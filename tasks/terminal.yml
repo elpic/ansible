@@ -7,7 +7,7 @@
 - name: Install iTerm2
   community.general.homebrew_cask:
     name: iterm2
-    state: present
+    state: absent
   tags:
     - install
     - terminal
@@ -97,5 +97,26 @@
   tags:
     - tpm
     - tmux
+    - terminal
+    - install
+
+- name: Tap a Homebrew repository homebrew/cask-font
+  community.general.homebrew_tap:
+    name: homebrew/cask-font
+    url: git@github.com:homebrew/homebrew-cask-fonts.git
+  tags:
+    - nerd-font
+    - font
+    - terminal
+    - install
+
+- name: Install meslo lg nerd font
+  community.general.homebrew_cask:
+    name: homebrew/cask-font/font-meslo-lg-nerd-font
+    state: present
+  tags:
+    - meslo-lg
+    - nerd-font
+    - font
     - terminal
     - install
