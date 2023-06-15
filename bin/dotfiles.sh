@@ -18,6 +18,10 @@ echo "Linking zshrc"
 rm -rf ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+echo "Linking ripgreprc"
+rm -rf ~/.ripgreprc
+ln -s ~/.dotfiles/.ripgreprc ~/.ripgreprc
+
 echo "Linking powerlevel 10k (zsh theme)"
 rm -rf ~/.p10k.zsh
 ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
