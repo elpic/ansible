@@ -44,7 +44,8 @@ rm -rf /usr/local/bin/tmux-sessionizer-switcher.sh
 echo "Linking sessionizer"
 rm -rf /usr/local/bin/sessionizer
 ln -s ~/.dotfiles/scripts/sessionizer/sessionizer /usr/local/bin/sessionizer
-mkdir -p ~/.config/tmuxinator/
+
+mkdir -p ~/.config/sessionizer
 
 echo "Linking tmux files"
 rm -rf ~/.tmux.conf
