@@ -60,8 +60,9 @@
 - name: Install fzf
   community.general.homebrew:
     name: fzf
-    state: present
+    state: absent
   tags:
+    - installed-though-asdf
     - install
     - terminal
     - fzf
@@ -71,8 +72,9 @@
 - name: Install zellij
   community.general.homebrew:
     name: zellij
-    state: present
+    state: absent
   tags:
+    - not-used-anymore
     - zellij
     - terminal
     - install
@@ -81,8 +83,9 @@
 - name: Install tmux
   community.general.homebrew:
     name: tmux
-    state: present
+    state: absent
   tags:
+    - installed-though-asdf
     - tmux
     - terminal
     - install
