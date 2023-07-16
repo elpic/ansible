@@ -1,0 +1,11 @@
+---
+- name: Install gpg
+  community.general.homebrew:
+    name: gpg
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - gpg
+    - yarn
+    - asdf

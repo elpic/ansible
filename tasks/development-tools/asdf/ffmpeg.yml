@@ -1,0 +1,177 @@
+---
+- name: Install automake
+  community.general.homebrew:
+    name: automake
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install fdk-aac
+  community.general.homebrew:
+    name: fdk-aac
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install lame
+  community.general.homebrew:
+    name: lame
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install libass
+  community.general.homebrew:
+    name: libass
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install libtool
+  community.general.homebrew:
+    name: libtool
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install libvorbis
+  community.general.homebrew:
+    name: libvorbis
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install libvpx
+  community.general.homebrew:
+    name: libvpx
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install opus
+  community.general.homebrew:
+    name: opus
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install sdl
+  community.general.homebrew:
+    name: sdl
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install shtool
+  community.general.homebrew:
+    name: shtool
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install texi2html
+  community.general.homebrew:
+    name: texi2html
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install theora
+  community.general.homebrew:
+    name: theora
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install x264
+  community.general.homebrew:
+    name: x264
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install x265
+  community.general.homebrew:
+    name: x265
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install xvid
+  community.general.homebrew:
+    name: xvid
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+
+- name: Install nasm
+  community.general.homebrew:
+    name: nasm
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - automake
+    - asdf
+    - asdf-ffmpeg
+

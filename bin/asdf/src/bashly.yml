@@ -1,0 +1,15 @@
+name: asdf
+help: Command to install or uninstall asdf plugins and software associated
+version: 0.1.0
+
+commands:
+- name: install
+  alias: i
+  help: Install plugins and software using asdf
+
+  examples:
+  - asdf install
+
+- name: uninstall
+  alias: u
+  help: Uninstall all plugins and software
