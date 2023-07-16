@@ -35,6 +35,22 @@
       ansible.builtin.include_tasks:
         file: tasks/development-tools.yml
 
+    - name: Developer tools asdf base related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/development-tools/asdf/base.yml
+
+    - name: Developer tools asdf yarn related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/development-tools/asdf/yarn.yml
+
+    - name: Developer tools asdf ffmpeg related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/development-tools/asdf/ffmpeg.yml
+
+    - name: Developer tools asdf software related tasks
+      ansible.builtin.include_tasks:
+        file: tasks/development-tools/asdf/software.yml
+
     - name: IDE related tasks
       ansible.builtin.include_tasks:
         file: tasks/ide.yml

@@ -1,0 +1,10 @@
+---
+- name: Install asdf
+  community.general.homebrew:
+    name: asdf
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - asdf
+    - version-manager

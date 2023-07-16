@@ -1,0 +1,9 @@
+---
+- name: Install asdf plugins and software
+  shell: ./bin/asdf/asdf install
+  tags:
+    - developer-tools
+    - install
+    - asdf
+    - asdf-plugins
+    - asdf-software
