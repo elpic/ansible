@@ -87,9 +87,9 @@
     - asdf
     - asdf-ffmpeg
 
-- name: Install sdl
+- name: Install sdl2
   community.general.homebrew:
-    name: sdl
+    name: sdl2
     state: present
   tags:
     - developer-tools
@@ -174,4 +174,3 @@
     - automake
     - asdf
     - asdf-ffmpeg
-

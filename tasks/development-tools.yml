@@ -419,3 +419,13 @@
     - developer-tools
     - install
     - misspell
+
+- name: Install pulumi
+  community.general.homebrew:
+    name: pulumi
+  tags:
+    - developer-tools
+    - install
+    - devops
+    - ioc
+    - pulumi
