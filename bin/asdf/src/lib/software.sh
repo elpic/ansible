@@ -22,6 +22,7 @@ declare -a plugin_and_versions=(
 	"terraform,1.3.7"
 	"tmux,3.0"
 	"yarn,1.22.17"
+	"java,openjdk-21"
 )
 
 # This function receive a function that is going to be executed

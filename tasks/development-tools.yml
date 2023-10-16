@@ -400,6 +400,99 @@
     - ripgrep
     - vim
 
+- name: Install fd
+  community.general.homebrew:
+    name: fd
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - fd
+    - vim
+
+- name: Install luarocks
+  community.general.homebrew:
+    name: luarocks
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - luarocks
+    - lua
+    - vim
+
+- name: Install composer
+  community.general.homebrew:
+    name: composer
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - composer
+    - lua
+    - vim
+
+- name: Install julia
+  community.general.homebrew:
+    name: julia
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - julia
+    - vim
+
+- name: Install hadolint
+  community.general.homebrew:
+    name: hadolint
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - lint
+    - docker
+    - hadolint
+    - vim
+
+- name: Install typescript
+  community.general.homebrew:
+    name: typescript
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - lsp
+    - typescript
+    - vim
+
+- name: Install gh
+  community.general.homebrew:
+    name: gh
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - gh
+    - cli
+    - vim
+
+- name: Install wget
+  community.general.homebrew:
+    name: wget
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - search
+    - wget
+    - mason
+    - mason-core-utils
+    - vim
+
 - name: Install diff-so-fancy
   community.general.homebrew:
     name: diff-so-fancy
@@ -407,25 +500,4 @@
   tags:
     - developer-tools
     - install
-    - diff-so-fancy
-    - diff
-    - git
-
-- name: Install misspell
-  shell: |
-    which misspell 1>/dev/null || (curl -L https://git.io/misspell | \
-      BINDIR=/usr/local/bin/ bash)
-  tags:
-    - developer-tools
-    - install
-    - misspell
-
-- name: Install pulumi
-  community.general.homebrew:
-    name: pulumi
-  tags:
-    - developer-tools
-    - install
-    - devops
-    - ioc
-    - pulumi
+    - di
