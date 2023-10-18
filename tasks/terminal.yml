@@ -22,6 +22,17 @@
     - terminal
     - terminal-emulator
 
+- name: Install starship
+  community.general.homebrew:
+    name: starship
+    state: present
+  tags:
+    - install
+    - terminal
+    - shell
+    - prompt
+    - tool
+
 - name: Install oh-my-zsh
   shell: |
     if [[ ! -d ~/.oh-my-zsh ]]; then
