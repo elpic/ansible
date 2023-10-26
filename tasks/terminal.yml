@@ -4,15 +4,6 @@
     name: zsh
     state: present
 
-- name: Install iTerm2
-  community.general.homebrew_cask:
-    name: iterm2
-    state: absent
-  tags:
-    - install
-    - terminal
-    - terminal-emulator
-
 - name: Install alacritty
   community.general.homebrew_cask:
     name: alacritty
@@ -68,18 +59,6 @@
     - vim
     - tool
 
-- name: Install fzf
-  community.general.homebrew:
-    name: fzf
-    state: absent
-  tags:
-    - installed-though-asdf
-    - install
-    - terminal
-    - fzf
-    - vim
-    - tool
-
 - name: Install zellij
   community.general.homebrew:
     name: zellij
@@ -87,17 +66,6 @@
   tags:
     - not-used-anymore
     - zellij
-    - terminal
-    - install
-    - terminal-multiplexer
-
-- name: Install tmux
-  community.general.homebrew:
-    name: tmux
-    state: absent
-  tags:
-    - installed-though-asdf
-    - tmux
     - terminal
     - install
     - terminal-multiplexer

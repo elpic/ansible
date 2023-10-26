@@ -3,6 +3,7 @@ declare -a plugin_and_versions=(
 	"elixir,1.14.3"
 	"erlang,23.3"
 	"ffmpeg,6.0"
+	"fzf,0.32.0"
 	"gcloud,422.0.0"
 	"golang,1.19.1"
 	"helm,3.11.2"
