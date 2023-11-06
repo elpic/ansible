@@ -11,6 +11,16 @@
     - kubernetes
     - logs
 
+- name: Install redis stack
+  community.general.homebrew_tap:
+    name: redis-stack/redis-stack
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - redis-stack
+    - redis
+
 - name: Install prettier
   community.general.homebrew:
     name: fsouza/prettierd/prettierd
