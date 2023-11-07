@@ -183,7 +183,7 @@
 - name: Install anaconda
   community.general.homebrew_cask:
     name: anaconda
-    state: present
+    state: absent
   tags:
     - anaconda
     - python
@@ -420,15 +420,6 @@
     - diff-so-fancy
     - diff
     - git
-
-- name: Install misspell
-  shell: |
-    which misspell 1>/dev/null || (curl -L https://git.io/misspell | \
-      BINDIR=/usr/local/bin/ bash)
-  tags:
-    - developer-tools
-    - install
-    - misspell
 
 - name: Install pulumi
   community.general.homebrew:

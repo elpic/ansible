@@ -48,9 +48,12 @@ echo "Removing tmux-sessionizer"
 rm -rf /usr/local/bin/tmux-sessionizer
 rm -rf /usr/local/bin/tmux-sessionizer-switcher.sh
 
+echo "Creating ~/.bin folder"
+mkdir ~/.local/bin
+
 echo "Linking sessionizer"
-rm -rf /usr/local/bin/sessionizer
-ln -s ~/.dotfiles/scripts/sessionizer/sessionizer /usr/local/bin/sessionizer
+rm -rf ~/.local/bin/sessionizer
+ln -s ~/.dotfiles/scripts/sessionizer/sessionizer ~/.local/bin/sessionizer
 
 mkdir -p ~/.config/sessionizer
 
@@ -59,5 +62,5 @@ rm -rf ~/.tmux.conf
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 echo "Linking cht.sh"
-rm -rf /usr/local/bin/cht.sh
-ln -s ~/.dotfiles/scripts/cht.sh /usr/local/bin/cht.sh
+rm -rf ~/.local/bin/cht.sh
+ln -s ~/.dotfiles/scripts/cht.sh ~/.local/bin/cht.sh
