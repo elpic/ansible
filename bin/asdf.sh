@@ -1,3 +1,19 @@
+#!/bin/bash -i
+
+set -o errexit
+set -o pipefail
+
+if [[ "${TRACE-0}" == "1" ]]; then
+	set -o xtrace
+fi
+
+if [[ "${1-}" =~ ^-*h(elp)?$ ]]; then
+	echo "Usage ./bin/asdf.sh [OPTIONS]"
+	echo ""
+	echo "  install - install all the asdf applications"
+	exit
+fi
+
 declare -a plugin_and_versions=(
 	"elixir,1.12.2"
 	"elixir,1.14.3"
@@ -14,8 +30,6 @@ declare -a plugin_and_versions=(
 	"python,2.7.18"
 	"python,3.10.5"
 	"python,3.9.16"
-	"ruby,2.6.6"
-	"ruby,2.7.6"
 	"ruby,3.1.0"
 	"rust,1.66.0"
 	"skaffold,1.39.1"
@@ -32,13 +46,13 @@ declare -a plugin_and_versions=(
 #
 # $1 a function that is going to be executed for each plugin
 execute_on_each_plugins() {
-	declare -a unique_plugins=()
+	local -a unique_plugins=()
 
 	for item in "${plugin_and_versions[@]}"; do
 		plugin=$(echo "$item" | cut -d',' -f1)
 
 		if [[ ! "${unique_plugins[*]}" =~ $plugin ]]; then
-			unique_plugins+=("$plugin")
+			unique_plugins=("${unique_plugins[@]}" "$plugin")
 		fi
 	done
 
@@ -60,3 +74,35 @@ execute_on_each_software() {
 		$1 "$plugin" "$version"
 	done
 }
+
+echo "Install plugins and software"
+
+function install_plugin() {
+	plugin=$1
+
+	echo " Checking if plugin: $plugin is installed"
+
+	if [[ $(asdf plugin list | grep -c "$plugin") -ne 1 ]]; then
+		echo " Installing plugin: $plugin"
+		asdf plugin add "$plugin"
+	else
+		echo " Skip plugin installation: $plugin"
+	fi
+}
+
+function install_software() {
+	plugin=$1
+	version=$2
+
+	echo " Checking if software: $plugin, $version is installed"
+
+	if [[ $(asdf list "$plugin" | grep -c "$version") -ne 1 ]]; then
+		echo " Installing software: $plugin, $version"
+		asdf install "$plugin" "$version"
+	else
+		echo " Skip software installation: $plugin, $version"
+	fi
+}
+
+execute_on_each_plugins install_plugin
+execute_on_each_software install_software

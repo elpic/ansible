@@ -9,17 +9,6 @@
     - vim
     - ide
 
-- name: Use nvim as vim
-  shell: |
-    if [[ ! -f /usr/local/bin/vim ]]; then
-      ln -s /usr/local/bin/nvim /usr/local/bin/vim
-    fi
-  tags:
-    - dotfiles
-    - install
-    - vim
-    - ide
-
 - name: Install eslint_d
   shell: npm install -g eslint_d
   tags:

@@ -45,3 +45,19 @@ that you can follow the instructions bellow
 cd ~/Downloads/ansible-main
 ./bin/base-install.sh
 ```
+
+## Run the scripts
+
+Since the only version of python that is installed is the one that is on your system, you need to
+export that to the path so the system knows about the python executable
+
+```shell
+# NOTE: depending on the version of python the command might change
+$ export PATH=$PATH:$HOME/Library/Python/3.9/bin
+```
+
+After that you can run the following line
+
+```shell
+$ ./bin/setup.sh
+```
