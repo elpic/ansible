@@ -46,7 +46,7 @@
 - name: Install Postgres app
   community.general.homebrew_cask:
     name: postgres-unofficial
-    state: present
+    state: absent
   tags:
     - postgres
     - desktop-app
@@ -58,7 +58,7 @@
   community.general.homebrew_cask:
     name: cron
     state: present
-  tags: 
+  tags:
     - install
     - desktop-app
     - calendar

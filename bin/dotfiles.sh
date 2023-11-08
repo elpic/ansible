@@ -57,7 +57,8 @@ echo "Linking sessionizer"
 rm -rf ~/.local/bin/sessionizer
 ln -s ~/.dotfiles/scripts/sessionizer/sessionizer ~/.local/bin/sessionizer
 
-mkdir -p ~/.config/sessionizer
+rm -rf ~/.config/sessionizer
+ln -s ~/.dotfiles/.config/sessionizer ~/.config/sessionizer
 
 echo "Linking tmux files"
 rm -rf ~/.tmux.conf
