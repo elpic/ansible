@@ -181,16 +181,6 @@
     - developer-tools
     - install
 
-- name: Install anaconda
-  community.general.homebrew_cask:
-    name: anaconda
-    state: absent
-  tags:
-    - anaconda
-    - python
-    - developer-tools
-    - install
-
 - name: Install bat
   community.general.homebrew:
     name: bat
@@ -281,7 +271,7 @@
 - name: Install exa
   community.general.homebrew:
     name: exa
-    state: present
+    state: absent
   tags:
     - exa
     - developer-tools
