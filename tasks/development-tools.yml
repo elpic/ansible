@@ -268,16 +268,14 @@
     - utility
     - tree
 
-- name: Install exa
+- name: Install tmux
   community.general.homebrew:
-    name: exa
-    state: absent
+    name: tmux
   tags:
-    - exa
+    - tmux
     - developer-tools
     - install
-    - ls-replacement
-    - ls
+    - terminal-multiplexer
 
 - name: Install tldr
   community.general.homebrew:
