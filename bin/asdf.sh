@@ -35,7 +35,6 @@ declare -a plugin_and_versions=(
 	"skaffold,1.39.1"
 	"skaffold,2.2.0"
 	"terraform,1.3.7"
-	"tmux,3.0"
 	"yarn,1.22.17"
 	"bun,1.0.7"
 )
