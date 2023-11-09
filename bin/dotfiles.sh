@@ -34,7 +34,10 @@ echo "Linking nvim"
 rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 
-echo "Linking nvim"
+rm -rf ~/.local/bin/vim
+ln -s $(which nvim) ~/.local/bin/sessionizer
+
+echo "Linking alacritty"
 rm -rf ~/.config/alacritty
 ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty
 
