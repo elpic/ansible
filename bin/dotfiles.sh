@@ -35,7 +35,7 @@ rm -rf ~/.config/nvim
 ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 
 rm -rf ~/.local/bin/vim
-ln -s $(which nvim) ~/.local/bin/sessionizer
+ln -s $(which nvim) ~/.local/bin/vim
 
 echo "Linking alacritty"
 rm -rf ~/.config/alacritty
