@@ -13,6 +13,17 @@
     - terminal
     - terminal-emulator
 
+- name: Install wezterm
+  community.general.homebrew_cask:
+    name: wezterm
+    state: present
+  tags:
+    - install
+    - terminal
+    - shell
+    - prompt
+    - tool
+
 - name: Install starship
   community.general.homebrew:
     name: starship
