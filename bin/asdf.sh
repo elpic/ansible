@@ -37,6 +37,7 @@ declare -a plugin_and_versions=(
 	"terraform,1.3.7"
 	"yarn,1.22.17"
 	"bun,1.0.7"
+	"pnpm,8.15.4"
 )
 
 # This function receive a function that is going to be executed

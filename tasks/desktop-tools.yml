@@ -43,6 +43,17 @@
     name: notion
     state: present
 
+- name: Install rewind
+  community.general.homebrew_cask:
+    name: rewind
+    state: present
+  tags:
+    - install
+    - desktop-app
+    - record-meetings
+    - record-audio
+    - record
+
 - name: Install cron
   community.general.homebrew_cask:
     name: cron
