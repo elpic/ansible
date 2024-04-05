@@ -3,6 +3,11 @@
     name: slack
     state: present
 
+- name: Install raycast
+  community.general.homebrew_cask:
+    name: raycast
+    state: present
+
 - name: Install brave browser
   community.general.homebrew_cask:
     name: brave-browser
