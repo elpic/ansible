@@ -345,6 +345,16 @@
     - install
     - ncdu
 
+- name: Install orbstack
+  community.general.homebrew:
+    name: orbstack
+    state: present
+  tags:
+    - developer-tools
+    - install
+    - docker
+    - docker-desktop-replacement
+
 - name: Install docker
   community.general.homebrew_cask:
     name: docker
