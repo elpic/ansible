@@ -61,17 +61,6 @@
     - vim
     - tool
 
-- name: Install zellij
-  community.general.homebrew:
-    name: zellij
-    state: absent
-  tags:
-    - not-used-anymore
-    - zellij
-    - terminal
-    - install
-    - terminal-multiplexer
-
 - name: Install tmux plugin manager
   ansible.builtin.git:
     repo: git@github.com:tmux-plugins/tpm.git
