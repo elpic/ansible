@@ -2,18 +2,9 @@
 - name: Install nvim
   community.general.homebrew:
     name: neovim
-    state: present
+    state: absent
   tags:
     - dotfiles
     - install
     - vim
     - ide
-
-- name: Install eslint_d
-  shell: npm install -g eslint_d
-  tags:
-    - dotfiles
-    - install
-    - vim
-    - eslint
-    - nodejs
