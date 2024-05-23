@@ -51,10 +51,6 @@
       ansible.builtin.include_tasks:
         file: tasks/development-tools/asdf/software.yml
 
-    - name: IDE related tasks
-      ansible.builtin.include_tasks:
-        file: tasks/ide.yml
-
     - name: Personal related tasks
       ansible.builtin.include_tasks:
         file: tasks/personal-tools.yml
