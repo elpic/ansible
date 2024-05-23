@@ -30,6 +30,7 @@ declare -a plugin_and_versions=(
 	"python,2.7.18"
 	"python,3.10.5"
 	"python,3.9.16"
+	"python,3.12.3"
 	"ruby,3.1.0"
 	"rust,1.66.0"
 	"skaffold,1.39.1"
