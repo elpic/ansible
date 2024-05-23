@@ -37,9 +37,6 @@ ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 rm -rf ~/.local/bin/vim
 ln -s $(asdf which nvim) ~/.local/bin/vim
 
-echo "Linking alacritty"
-rm -rf ~/.config/alacritty
-
 echo "Linking asdf default versions"
 rm -rf ~/.tool-versions
 ln -s ~/.dotfiles/.tool-versions ~/.tool-versions

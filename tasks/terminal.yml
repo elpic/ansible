@@ -4,15 +4,6 @@
     name: zsh
     state: present
 
-- name: Install alacritty
-  community.general.homebrew_cask:
-    name: alacritty
-    state: absent
-  tags:
-    - install
-    - terminal
-    - terminal-emulator
-
 - name: Install wezterm
   community.general.homebrew_cask:
     name: wezterm
