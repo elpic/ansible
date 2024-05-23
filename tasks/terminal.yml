@@ -7,7 +7,7 @@
 - name: Install alacritty
   community.general.homebrew_cask:
     name: alacritty
-    state: present
+    state: absent
   tags:
     - install
     - terminal
