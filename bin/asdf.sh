@@ -16,7 +16,7 @@ fi
 
 declare -a plugin_and_versions=(
 	"ffmpeg,6.0"
-	"fzf,0.32.0"
+	"fzf,0.52.1"
 	"golang,1.19.1"
 	"helm,3.11.2"
 	"kustomize,4.5.7"
