@@ -25,6 +25,7 @@ declare -a plugin_and_versions=(
 	"postgres,14.0"
 	"python,3.10.5"
 	"python,3.12.3"
+	"pipx,1.5.0"
 	"ruby,3.1.0"
 	"rust,1.66.0"
 	"terraform,1.3.7"
