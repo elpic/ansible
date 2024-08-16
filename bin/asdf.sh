@@ -19,8 +19,6 @@ declare -a plugin_and_versions=(
 	"fzf,0.52.1"
 	"golang,1.19.1"
 	"helm,3.11.2"
-	"kustomize,4.5.7"
-	"kustomize,5.0.0"
 	"nodejs,16.16.0"
 	"postgres,14.0"
 	"python,3.10.5"
@@ -30,10 +28,9 @@ declare -a plugin_and_versions=(
 	"rust,1.66.0"
 	"terraform,1.3.7"
 	"yarn,1.22.17"
-	"bun,1.0.7"
 	"pnpm,8.15.4"
-	"neovim,0.9.5"
 	"fd,10.1.0"
+	"neovim,0.10.1"
 )
 
 # This function receive a function that is going to be executed
