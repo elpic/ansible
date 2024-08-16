@@ -2,7 +2,7 @@
 - name: Install stern
   community.general.homebrew:
     name: stern
-    state: present
+    state: absent
   tags:
     - core-servicing
     - developer-tools
@@ -21,10 +21,20 @@
     - session-manager
     - tmux
 
+- name: Install pinentry-mac
+  community.general.homebrew:
+    name: pinentry-mac
+    state: present
+  tags:
+    - install
+    - gpg
+    - pinentry
+    - git
+
 - name: Install redis stack
   community.general.homebrew_tap:
     name: redis-stack/redis-stack
-    state: present
+    state: absent
   tags:
     - developer-tools
     - install
@@ -52,7 +62,7 @@
     - stylua
     - lua
 
-- name: Install stylua
+- name: Install selene
   community.general.homebrew:
     name: selene
     state: present

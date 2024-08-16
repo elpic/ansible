@@ -61,3 +61,9 @@ After that you can run the following line
 ```shell
 $ ./bin/setup.sh
 ```
+
+If you prefer to test it manually you can use the following script
+
+```shell
+$ ansible-playbook local.yml --skip-tags ssh,aws
+```

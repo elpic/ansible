@@ -33,6 +33,7 @@ declare -a plugin_and_versions=(
 	"bun,1.0.7"
 	"pnpm,8.15.4"
 	"neovim,0.9.5"
+	"fd,10.1.0"
 )
 
 # This function receive a function that is going to be executed
